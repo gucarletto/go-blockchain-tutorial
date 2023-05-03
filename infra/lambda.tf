@@ -4,7 +4,7 @@ resource "aws_lambda_function" "go_blockchain" {
   handler = "main"
   timeout = 10
   memory_size = 128
-  role = "${aws_iam_role.iam_for_lambda.arn}"
+  role = "${aws_iam_role.lambda.arn}"
 
   environment = {
     variables = {
