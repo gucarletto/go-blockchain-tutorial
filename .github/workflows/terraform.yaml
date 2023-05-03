@@ -5,13 +5,14 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    working-directory: ./tf-folder-1
+
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: 'ubuntu-latest'
-  defaults:
-    run:
-      working-directory: ./infra
     steps:
     - name: Checkout
       uses: actions/checkout@v2
