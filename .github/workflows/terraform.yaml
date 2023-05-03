@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./tf-folder-1
+    working-directory: ./infra
 
 jobs:
   terraform:
