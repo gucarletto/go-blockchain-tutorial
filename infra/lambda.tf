@@ -20,11 +20,11 @@ resource "aws_iam_role" "lambda" {
     Version = "2012-10-17"
     Statement = [
       {
-        Action: sts:AssumeRole,
+        Action: "sts:AssumeRole",
         Principal: {
-          Service: lambda.amazonaws.com
+          Service: "lambda.amazonaws.com"
         },
-        Effect: Allow,
+        Effect: "Allow",
         Sid: ""
       }
     ]
