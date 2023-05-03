@@ -4,6 +4,7 @@ resource "aws_lambda_function" "go_blockchain" {
   handler = "main"
   timeout = 10
   memory_size = 128
+  filename = "go_blockchain.zip"
   role = "${aws_iam_role.lambda.arn}"
 }
 
