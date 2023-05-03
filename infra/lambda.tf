@@ -5,12 +5,6 @@ resource "aws_lambda_function" "go_blockchain" {
   timeout = 10
   memory_size = 128
   role = "${aws_iam_role.lambda.arn}"
-
-  environment = {
-    variables = {
-      PORT = 8080
-    }
-  }
 }
 
 resource "aws_iam_role" "lambda" {
