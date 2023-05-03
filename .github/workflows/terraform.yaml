@@ -1,4 +1,4 @@
-name : Deploy API Gateway with Terraform
+name : Deploy Lambda with Terraform
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
     - name: AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-acess-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: 'sa-east-1'
 
