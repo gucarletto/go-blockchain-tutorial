@@ -1,10 +1,16 @@
+data "archive_file" "archive-lambda" {
+  type        = "zip"
+  output_path = "./go-blockchain.zip"
+  source_dir  = "src"
+}
+
 resource "aws_lambda_function" "go_blockchain" {
   function_name = "go_blockchain"
   runtime = "go1.x"
   handler = "main"
   timeout = 10
   memory_size = 128
-  filename = "go_blockchain.zip"
+  filename = data.archive_file.archive-lambda.output_path
   role = "${aws_iam_role.lambda.arn}"
 }
 
